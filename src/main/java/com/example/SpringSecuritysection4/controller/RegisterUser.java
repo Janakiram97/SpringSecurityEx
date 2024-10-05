@@ -30,7 +30,7 @@ public class RegisterUser {
             }
         }catch(Exception e){
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR)
-                    .body("An Exception occured : "+e.getMessage());
+                    .body("An Exception occurred : "+e.getMessage());
         }
     }
 }
