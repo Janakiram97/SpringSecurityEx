@@ -26,7 +26,7 @@ public class RegisterUser {
                 return ResponseEntity.status(HttpStatus.CREATED).
                         body("Customer created successfully "+customer.getId());
             }else{
-                return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("Customer registration failed");
+                return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("Customer registration failed "+customer.getId());
             }
         }catch(Exception e){
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR)
