@@ -24,7 +24,7 @@ public class RegisterUser {
             Customer savedCustomer = customerRepository.save(customer);
             if(savedCustomer.getId()>0){
                 return ResponseEntity.status(HttpStatus.CREATED).
-                        body("Customer created successfully ");
+                        body("Customer created successfully "+customer.getId());
             }else{
                 return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("Customer registration failed");
             }
